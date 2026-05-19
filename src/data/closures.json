@@ -1,0 +1,86 @@
+[
+  {
+    "key": "PL-62429",
+    "summary": "Support storing ARN as plain text in AWS KMS secret manager connector",
+    "reporter": "Nishant Saini",
+    "assignee": "Meenakshi Raikwar",
+    "previousStatus": "In Progress",
+    "currentStatus": "Done",
+    "action": "Closed as Done",
+    "reason": "All 8 child tickets completed — backend, UI, Terraform, docs, and QA automation all shipped. Solution 1 (ARN as plain text) fully delivered across all credential types. Canny feature request resolved.",
+    "method": "Direct closure",
+    "date": "2026-05-08"
+  },
+  {
+    "key": "PL-61376",
+    "summary": "Refining Index Management",
+    "reporter": "Arya Haldar",
+    "assignee": "Abhinav Singh",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Requested closure",
+    "reason": "All 8 child tickets in terminal state (3 Done, 5 Won't Fix/Duplicate/Invalid). PoC objectives completed. No open work remains. Epic in To Do for 415+ days.",
+    "method": "Comment tagging assignee to close",
+    "date": "2026-05-08"
+  },
+  {
+    "key": "PL-55724",
+    "summary": "Flexible resource hierarchy",
+    "reporter": "Gaurav Nanda",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "To Do",
+    "currentStatus": "In Progress",
+    "action": "Pending closure",
+    "reason": "All 4 child tickets Done (design, planning, AC redesign, folder hierarchy). Original scope was a spike/research — complete. Work graduated to PL-59171 (Move Project Initiative). Component deprecated.",
+    "method": "Analysis complete, closure pending confirmation",
+    "date": "2026-05-08"
+  },
+  {
+    "key": "PL-50584",
+    "summary": "License Utilization - Fix Now",
+    "reporter": "Prashant Batra",
+    "assignee": "Sachin Walia",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Pending closure (1 week deadline)",
+    "reason": "Reporter and assignee both left org. 22/37 children Done, 11 closed (Won't Fix/Duplicate/Invalid/Not a Bug). 3 remaining To Do items flagged for their module owners. No description, no owner, 740+ days stale.",
+    "method": "Comment with full summary, 1-week deadline for objections",
+    "date": "2026-05-08"
+  },
+  {
+    "key": "UI-1630",
+    "summary": "SEI - License Utilization - DOMO reporting for utilization and adoption tracking",
+    "reporter": "Yashaswini Raghavan",
+    "assignee": "Unassigned",
+    "previousStatus": "To Do",
+    "currentStatus": "Will Not Fix",
+    "action": "Closed as Will Not Fix",
+    "reason": "Child of PL-50584. Unassigned, 730+ days stale, no comments. SEI module-specific work that should be owned by SEI team independently. Reporter closed after our comment.",
+    "method": "Comment tagging reporter — reporter self-closed",
+    "date": "2026-05-08"
+  },
+  {
+    "key": "CI-13529",
+    "summary": "Caribou - Data and Trends Inconsistencies",
+    "reporter": "Alan Gudiel",
+    "assignee": "Rajatha Ranganath",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Requested update/closure",
+    "reason": "Child of PL-50584. Customer-specific Caribou data issue from July 2024, 660+ days stale. Sibling CI/Domo reporting tickets already resolved. Likely fixed by broader license utilization work.",
+    "method": "Comment tagging assignee and reporter — 1 week deadline",
+    "date": "2026-05-08"
+  },
+  {
+    "key": "CCM-21811",
+    "summary": "CCM - License Utilization - Report Annual Cloud Spend Used for in-Product and Segment",
+    "reporter": "Prashant Batra",
+    "assignee": "Abhinav Singh",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Requested update/closure",
+    "reason": "Child of PL-50584. Reporter left org. 725+ days stale. Sibling CCM-17004 (annualized reporting to metabase) already completed. Likely addressed by existing CCM work.",
+    "method": "Comment tagging assignee — 1 week deadline",
+    "date": "2026-05-08"
+  }
+]

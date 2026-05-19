@@ -1,0 +1,252 @@
+[
+  {
+    "id": "29923",
+    "name": "All Vulnerabilities ",
+    "jql": "labels in (vuln) order by due asc"
+  },
+  {
+    "id": "39338",
+    "name": "Customer Prod Regression",
+    "jql": "issuetype = bug AND project in (Platform,UDP) AND status not in (Duplicate, \"Will Not Fix\", Invalid, \"Can Not Reproduce\", Canceled, \"Not a Bug\") AND (\"Defect Type[Select List (multiple choices)]\" = Regression ) AND \"Found In[Dropdown]\" in (prod, prod-0, smp, ONPREM) AND \"Customer(s)\" is not EMPTY AND \"Customer(s)\" not in (\"Harness/ Internal\", Harness) and resolution = Unresolved"
+  },
+  {
+    "id": "32553",
+    "name": "CustomerCommitOverDue",
+    "jql": "project in (Platform, \"Unified Data Platform\")\nand ((type in (Initiative, Epic)\nand ( \"Customer Commitment[Date]\" IS NOT empty\nor (\"customer(s)[select list (multiple choices)]\" IS NOT empty\nand \"customer(s)[select list (multiple choices)]\" NOT IN (Harness, \"Harness/ Internal\"))))\nand resolution = Unresolved)\nand created <= 2026-01-31"
+  },
+  {
+    "id": "37622",
+    "name": "Dashboard Beta Bugs",
+    "jql": "type = bug and labels = dashboard-2.0-bugs and resolution = Unresolved\nORDER BY assignee ASC, priority DESC, status ASC"
+  },
+  {
+    "id": "39485",
+    "name": "Filter for Platform",
+    "jql": "project in (10215) ORDER BY Rank ASC"
+  },
+  {
+    "id": "39339",
+    "name": "Internal Prod Regression",
+    "jql": "issuetype = bug AND project in (Platform,UDP)  AND status not in (Duplicate, \"Will Not Fix\", Invalid, \"Can Not Reproduce\", Canceled, \"Not a Bug\") AND (\"Defect Type[Select List (multiple choices)]\" = Regression ) AND \"Found In[Dropdown]\" in (prod, prod-0, smp, ONPREM) AND (\"Customer(s)\" is EMPTY OR \"Customer(s)\" in (Harness, \"Harness/ Internal\")) AND RESOLUTION = Unresolved"
+  },
+  {
+    "id": "39340",
+    "name": "Internal Regression",
+    "jql": "issuetype = bug AND project IN (Platform, UDP) AND (\"Defect Type[Select List (multiple choices)]\" = Regression ) AND \"Found In[Dropdown]\" not in (prod, prod-0, smp, ONPREM)"
+  },
+  {
+    "id": "41536",
+    "name": "Open Feature Request",
+    "jql": "issuetype = \"Feature Request\" and resolution = Unresolved"
+  },
+  {
+    "id": "39838",
+    "name": "Others Depend on Platform",
+    "jql": "project = PL  and issuetype = Depend and resolution = Unresolved"
+  },
+  {
+    "id": "39904",
+    "name": "Others Depend on UDP",
+    "jql": "project = UDP  and issuetype = Depend and resolution = Unresolved"
+  },
+  {
+    "id": "39871",
+    "name": "PL Dependency on Other",
+    "jql": "issuetype = Depend and parentProject = PL and resolution = unresolved"
+  },
+  {
+    "id": "41059",
+    "name": "Platform 1Q2027 Commiment",
+    "jql": "project in (PL, UDP) AND issuetype in (Initiative, Epic, Spike) AND \"Delivery quarter[Dropdown]\" = 1Q2027 AND STATUS NOT IN (DUPLICATE, Invalid, \"Will Not Fix\")"
+  },
+  {
+    "id": "41060",
+    "name": "Platform 2Q2027 Commiment",
+    "jql": "project in (PL, UDP) AND issuetype in (Initiative, Epic, Story, Spike) AND \"Delivery quarter[Dropdown]\" = 2Q2027 AND STATUS NOT IN (DUPLICATE, Invalid, \"Will Not Fix\")"
+  },
+  {
+    "id": "41026",
+    "name": "Platform All OPEN Prod MissingSeverity",
+    "jql": "project in (Pl, UDP) AND  issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) AND resolution = Unresolved and \"Severity[Dropdown]\" = EMPTY"
+  },
+  {
+    "id": "32550",
+    "name": "Platform All Open CFDs",
+    "jql": "project IN (PL, \"Unified Data Platform\") AND project = Platform AND issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) AND \"Customer(s)\" is not EMPTY AND \"Customer(s)\" not in (\"Harness/ Internal\", Harness) and resolution = Unresolved"
+  },
+  {
+    "id": "39584",
+    "name": "Platform All Open RCA",
+    "jql": "project in (PL, \"Unified Data Platform\") AND issuetype = rca AND status not in (done, invalid, cancelled)"
+  },
+  {
+    "id": "39592",
+    "name": "Platform All Open Vulnerability Tickets",
+    "jql": "Project in (PL,UDP) AND labels in (vuln) AND status not in (deployed, \"will not fix\", done, \"not a bug\", \"duplicate\", \"cancelled\", \"invalid\",\"Dev Complete\") ORDER BY due ASC"
+  },
+  {
+    "id": "36539",
+    "name": "Platform Backlog (Everything)",
+    "jql": "project in (Platform, \"Unified Data Platform\") and resolution = Unresolved "
+  },
+  {
+    "id": "36538",
+    "name": "Platform Backlog (Init,Epic)",
+    "jql": "project in (PL) AND issuetype IN (Initiative, Epic) AND resolution = Unresolved"
+  },
+  {
+    "id": "39971",
+    "name": "Platform Cloud Cost",
+    "jql": "labels IN ( rnd-cloud-cost-warroom, finops-recommendation) and status in (\"To Do\") and project in (PL,UDP) ORDER BY createdDate"
+  },
+  {
+    "id": "39591",
+    "name": "Platform Customer VulnTickets SLA Breached",
+    "jql": "Project in (PL,UDP) and labels in (vuln) AND labels in (jira_escalated) AND status not in (deployed, Done, \"will not fix\", \"not a bug\", duplicate, Canceled, invalid, cancelled) AND (due <= now() OR due is EMPTY) ORDER BY key ASC, due ASC, status DESC"
+  },
+  {
+    "id": "32561",
+    "name": "Platform Missing Severity",
+    "jql": "project in (Platform, \"Unified Data Platform\") and issuetype = bug and severity is EMPTY and \"Found In[Dropdown]\" in ('PROD', 'PROD-0') and resolution = Unresolved \n"
+  },
+  {
+    "id": "32552",
+    "name": "Platform Open Questions",
+    "jql": "project in (Platform, \"Unified Data Platform\") AND type = Question AND statusCategory != Done ORDER BY created DESC"
+  },
+  {
+    "id": "39585",
+    "name": "Platform Open RCA Action ",
+    "jql": "labels in (rca_action_item)\nAND project in (PL,UDP) AND statusCategory != Done"
+  },
+  {
+    "id": "39593",
+    "name": "Platform Security Tickets (Customer Requiring Fix)",
+    "jql": "Project in (PL, UDP) And labels in (vuln) AND labels in (jira_escalated) AND status NOT IN (deployed, \"will not fix\", done, \"not a bug\", \"duplicate\", \"cancelled\", \"invalid\", \"Dev Complete\") ORDER BY due ASC"
+  },
+  {
+    "id": "39587",
+    "name": "Platform Security Tickets (End-of-life)",
+    "jql": "Project in (PL,UDP) AND status NOT IN (deployed, \"will not fix\", done, \"not a bug\", \"duplicate\", \"cancelled\", \"invalid\", \"Dev Complete\")\nAND labels = eol_component\nORDER BY due ASC"
+  },
+  {
+    "id": "39697",
+    "name": "Platform Spike ",
+    "jql": "Project in (PL,UDP) and issuetype = Spike and resolution = Unresolved"
+  },
+  {
+    "id": "39586",
+    "name": "Platform VulnTickets - Fix not Available",
+    "jql": "PRoject in (PL,UDP) AND labels = Fix-not-available AND status NOT IN (Done, \"Done w/ FF\", \"Done w/ GA\", \"Done \u2705\")"
+  },
+  {
+    "id": "39590",
+    "name": "Platform VulnTickets - SLA Breached",
+    "jql": "Project in (PL,UDP) AND labels IN (vuln)\nAND status NOT IN (deployed, \"will not fix\", done, \"not a bug\", \"duplicate\", \"cancelled\", \"invalid\", \"Dev Complete\")\nAND due <= \"0\"\nORDER BY due ASC"
+  },
+  {
+    "id": "39588",
+    "name": "Platform VulnTickets - to Breach in 15Days",
+    "jql": "Project in (PL,UDP) AND labels IN (vuln)\nAND status NOT IN (deployed, \"will not fix\", done, \"not a bug\", \"duplicate\", \"cancelled\", \"invalid\", \"Dev Complete\")\nAND due >= \"0\"\nAND due <= 15d\nORDER BY due ASC"
+  },
+  {
+    "id": "39589",
+    "name": "Platform VulnTickets - to Breach in 7Days",
+    "jql": "Project in (PL,UDP) AND labels IN (vuln)\nAND status NOT IN (deployed, \"will not fix\", done, \"not a bug\", \"duplicate\", \"cancelled\", \"invalid\", \"Dev Complete\")\nAND due >= \"0\"\nAND due <= 7d\nORDER BY due ASC"
+  },
+  {
+    "id": "31406",
+    "name": "Platform-All - Bugs",
+    "jql": "project IN (PL) AND issuetype IN (Bug)\nORDER BY created DESC, priority DESC, updated DESC"
+  },
+  {
+    "id": "32698",
+    "name": "Platform-All-CFDs-Trend",
+    "jql": "project IN (PL, \"Unified Data Platform\") AND issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) AND \"Customer(s)\" is not EMPTY AND \"Customer(s)\" not in (\"Harness/ Internal\", Harness) AND created >= -180d"
+  },
+  {
+    "id": "32697",
+    "name": "Platform-All-IFD-Trend",
+    "jql": "project = Platform AND (\"Customer(s)\" is EMPTY AND Reporter != \"Zendesk Support for Jira\"  And \"SWAT Initiated\" = \"No\") AND type = Bug And created >= -180d"
+  },
+  {
+    "id": "32560",
+    "name": "Platform-All-OPEN-Prod",
+    "jql": "project in (Pl, UDP) AND  issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) AND resolution = Unresolved"
+  },
+  {
+    "id": "40486",
+    "name": "Platform-All-OPEN-Prod_S0S1S2",
+    "jql": "project in (Pl, UDP) \nand issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) and resolution = Unresolved and \"Severity[Dropdown]\" in (S0,S1,S2)"
+  },
+  {
+    "id": "32696",
+    "name": "Platform-All-Open-IFD",
+    "jql": "project in (Platform, UDP) AND issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) AND (\"Customer(s)\" is EMPTY OR \"Customer(s)\" in (Harness, \"Harness/ Internal\")) AND resolution = Unresolved"
+  },
+  {
+    "id": "32557",
+    "name": "Platform-All-REGRESSIONS",
+    "jql": "project in (PL, \"Unified Data Platform\") AND issuetype = Bug AND (labels IN (regression) OR \"Defect Type[Select List (multiple choices)]\" = Regression) AND created >= -180d"
+  },
+  {
+    "id": "32562",
+    "name": "Platform-BUGS-Fixed-Last-15D",
+    "jql": "project = \"Cloud Cost Management\" and statusCategory = Done and issuetype in (Bug) and status not in (Invalid, \"Not a Bug\", \"Will Not Fix\", Duplicate, \"Can Not Reproduce\") and resolved > -10d order by resolved DESC"
+  },
+  {
+    "id": "33012",
+    "name": "Platform-Block-Others-Open",
+    "jql": "project in (Platform, \"Unified Data Platform\") AND (issuetype = Depend OR issueLinkType in (\"is blocked by\")) AND resolution = Unresolved"
+  },
+  {
+    "id": "32559",
+    "name": "Platform-Bug-OVERDUE",
+    "jql": "project in (Platform, UDP) and statusCategory not in (done) and duedate <now() and issuetype in (Bug) and \"Severity[Dropdown]\" in (S0, S1)"
+  },
+  {
+    "id": "32661",
+    "name": "Platform-CustomerRegression-Last2Wks",
+    "jql": "issuetype = bug AND project in (Platform,UDP) AND status not in (Duplicate, \"Will Not Fix\", Invalid, \"Can Not Reproduce\", Canceled, \"Not a Bug\") AND (\"Defect Type[Select List (multiple choices)]\" = Regression ) AND \"Found In[Dropdown]\" in (prod, prod-0, smp, ONPREM) AND \"Customer(s)\" is not EMPTY AND \"Customer(s)\" not in (\"Harness/ Internal\", Harness) and resolution = Unresolved and created >= -14d\n"
+  },
+  {
+    "id": "32554",
+    "name": "Platform-FEATURES-DUE-THISMONTH",
+    "jql": "filter = \"Platform PM/Eng Prioritized Tickets\"\nand resolution = Unresolved\nand \"Customer Commitment[Date]\" IS NOT empty\nORDER BY component ASC, \"cf[10738]\" ASC"
+  },
+  {
+    "id": "32556",
+    "name": "Platform-Last2Weeks-DONE",
+    "jql": "project in (Platform, \"Unified Data Platform\") and statusCategory = Done and issuetype in (Bug, Epic) and status not in (Invalid, \"Not a Bug\", \"Will Not Fix\", Duplicate, \"Can Not Reproduce\") and resolved > -15d order by resolved DESC"
+  },
+  {
+    "id": "32695",
+    "name": "Platform-Open-CFDs-BreachedSLA",
+    "jql": "project IN (PL, \"Unified Data Platform\") AND project = Platform AND issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) AND \"Customer(s)\" is not EMPTY AND \"Customer(s)\" not in (\"Harness/ Internal\", Harness) and resolution = Unresolved and (priority in (p0, p1) or \"Severity[Dropdown]\" in (S0, S1) or (priority = p2 and created < -6w) or (\"Severity[Dropdown]\" = S2 and created < -6w) or (\"Severity[Dropdown]\" = S3 and created < -90d) or (\"Severity[Dropdown]\" = S4 and created < -180d))"
+  },
+  {
+    "id": "32699",
+    "name": "Platform-PROD-All-Trend",
+    "jql": "project in (Pl, UDP) \nand issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) and created >= -180d\nORDER BY status ASC"
+  },
+  {
+    "id": "32628",
+    "name": "Platform-PROD-Created-Last2Wks",
+    "jql": "project in (Pl, UDP) \nand issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) and resolution = Unresolved AND created >= -2w "
+  },
+  {
+    "id": "32662",
+    "name": "Platform-PROD-S0S1-OPEN",
+    "jql": "IssueType in (Bug)\nand project in (Pl, UDP) \nand \"Found In[Dropdown]\" in (PROD, PROD-0) and resolution = Unresolved AND \"Severity[Dropdown]\" in (S0,S1)\nORDER BY status ASC"
+  },
+  {
+    "id": "40519",
+    "name": "Platform-Prod_MissingSeverity",
+    "jql": "project in (Pl, UDP) \nand issuetype = Bug AND \"Found In[Dropdown]\" in (PROD, PROD-0, ONPREM, SMP) AND status not in (Invalid, \"Can Not Reproduce\", \"Not a Bug\", \"Will Not Fix\", Duplicate) and resolution = Unresolved and \"Severity[Dropdown]\" in (S0,S1,S2)"
+  },
+  {
+    "id": "31072",
+    "name": "Platform_All_Open_Initiative",
+    "jql": "project in (Platform)\nand IssueType = Initiative \nand resolution = Unresolved"
+  }
+]
