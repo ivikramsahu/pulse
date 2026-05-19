@@ -725,6 +725,35 @@ function LeaderboardPage() {
             </div>
           )}
 
+          {/* Filters — prominent position */}
+          <div className={`rounded-xl p-4 border ${cardBg}`}>
+            <div className="flex flex-wrap items-center gap-3">
+              <input type="text" placeholder="Search tickets..." value={search} onChange={e => setSearch(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm w-56 focus:outline-none focus:border-blue-500 ${inputCls}`} />
+              <select value={customerFilter} onChange={e => setCustomerFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
+                <option value="">All Customers</option>
+                {(data.filters?.customers || []).map(c => <option key={c} value={c}>{c}</option>)}
+              </select>
+              <select value={assigneeFilter} onChange={e => setAssigneeFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
+                <option value="">All Assignees</option>
+                {(data.filters?.assignees || []).map(a => <option key={a} value={a}>{a}</option>)}
+              </select>
+              <select value={reporterFilter} onChange={e => setReporterFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
+                <option value="">All Reporters</option>
+                {(data.filters?.reporters || []).map(r => <option key={r} value={r}>{r}</option>)}
+              </select>
+              <select value={sprintFilter} onChange={e => setSprintFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
+                <option value="">All Sprints</option>
+                {(data.filters?.sprints || []).map(s => <option key={s} value={s}>{s}</option>)}
+              </select>
+              {(customerFilter || assigneeFilter || reporterFilter || sprintFilter || search) && (
+                <button onClick={() => { setCustomerFilter(''); setAssigneeFilter(''); setReporterFilter(''); setSprintFilter(''); setSearch('') }} className={`text-xs px-3 py-2 rounded-lg border transition-colors ${theme === 'dark' ? 'border-red-700 text-red-400 hover:bg-red-900/30' : 'border-red-300 text-red-600 hover:bg-red-50'}`}>
+                  Clear Filters
+                </button>
+              )}
+              <span className={`ml-auto text-xs ${textSub}`}>{filteredTickets.length} of {data.total} tickets</span>
+            </div>
+          </div>
+
           {/* Charts: Assignee and Customer leaderboard */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className={`rounded-xl p-5 border ${cardBg}`}>
@@ -754,35 +783,6 @@ function LeaderboardPage() {
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
-            </div>
-          </div>
-
-          {/* Filters row */}
-          <div className={`rounded-xl p-4 border ${cardBg}`}>
-            <div className="flex flex-wrap items-center gap-3">
-              <input type="text" placeholder="Search tickets..." value={search} onChange={e => setSearch(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm w-56 focus:outline-none focus:border-blue-500 ${inputCls}`} />
-              <select value={customerFilter} onChange={e => setCustomerFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
-                <option value="">All Customers</option>
-                {(data.filters?.customers || []).map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
-              <select value={assigneeFilter} onChange={e => setAssigneeFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
-                <option value="">All Assignees</option>
-                {(data.filters?.assignees || []).map(a => <option key={a} value={a}>{a}</option>)}
-              </select>
-              <select value={reporterFilter} onChange={e => setReporterFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
-                <option value="">All Reporters</option>
-                {(data.filters?.reporters || []).map(r => <option key={r} value={r}>{r}</option>)}
-              </select>
-              <select value={sprintFilter} onChange={e => setSprintFilter(e.target.value)} className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500 ${selectCls}`}>
-                <option value="">All Sprints</option>
-                {(data.filters?.sprints || []).map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
-              {(customerFilter || assigneeFilter || reporterFilter || sprintFilter || search) && (
-                <button onClick={() => { setCustomerFilter(''); setAssigneeFilter(''); setReporterFilter(''); setSprintFilter(''); setSearch('') }} className={`text-xs px-3 py-2 rounded-lg border transition-colors ${theme === 'dark' ? 'border-red-700 text-red-400 hover:bg-red-900/30' : 'border-red-300 text-red-600 hover:bg-red-50'}`}>
-                  Clear Filters
-                </button>
-              )}
-              <span className={`ml-auto text-xs ${textSub}`}>{filteredTickets.length} of {data.total} tickets</span>
             </div>
           </div>
 
