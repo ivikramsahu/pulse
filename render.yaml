@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: platform-pulse-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JIRA_EMAIL
+        sync: false
+      - key: JIRA_API_TOKEN
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://vikramsahu.in

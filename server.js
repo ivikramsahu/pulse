@@ -7,15 +7,23 @@ import yaml from 'js-yaml'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || '*'
+}))
 app.use(express.json())
 
-const configPath = path.resolve(__dirname, '../config/atlassian.yaml')
-const config = yaml.load(fs.readFileSync(configPath, 'utf8'))
-const email = config.credentials.email
-const apiToken = config.credentials.api_token
+let email, apiToken
+if (process.env.JIRA_EMAIL && process.env.JIRA_API_TOKEN) {
+  email = process.env.JIRA_EMAIL
+  apiToken = process.env.JIRA_API_TOKEN
+} else {
+  const configPath = path.resolve(__dirname, '../config/atlassian.yaml')
+  const config = yaml.load(fs.readFileSync(configPath, 'utf8'))
+  email = config.credentials.email
+  apiToken = config.credentials.api_token
+}
 const authHeader = 'Basic ' + Buffer.from(`${email}:${apiToken}`).toString('base64')
-const JIRA_BASE = 'https://api.atlassian.com/ex/jira/85cd207b-0617-4d47-81a2-6cd6e902ca59/rest/api/3'
+const JIRA_BASE = process.env.JIRA_BASE_URL || 'https://api.atlassian.com/ex/jira/85cd207b-0617-4d47-81a2-6cd6e902ca59/rest/api/3'
 
 function extractText(doc, maxLen = 800) {
   if (!doc) return 'No description provided'
@@ -739,7 +747,7 @@ app.get('/api/tickets/:filterId', async (req, res) => {
   }
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`API server running at http://localhost:${PORT}`)
 })
