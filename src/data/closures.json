@@ -166,5 +166,101 @@
     "reason": "Zero child tickets created. No work decomposed. Sitting in To Do for 350+ days with no activity. Never scoped or prioritized into any sprint.",
     "method": "Comment tagging @Prateek Mittal to close as Won't Do, cc @Umesh Kumar",
     "date": "2026-05-20"
+  },
+  {
+    "key": "PL-61356",
+    "summary": "Improvements for content in Delegate notifications",
+    "reporter": "Abhishek Thamman",
+    "assignee": "Raghvendra Singh (DEACTIVATED)",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Owner alignment comment posted — tagged reporter",
+    "reason": "Child of PL-59912. Assignee (Raghvendra Singh) deactivated. P2, 425+ days stale. Needs reassignment to Delegate team owner or closure.",
+    "method": "Comment tagging @Abhishek Thamman to reassign or close",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-58997",
+    "summary": "Ability to not store the delegate token on the delegate filesystem",
+    "reporter": "Greg Kroon",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "New",
+    "currentStatus": "New",
+    "action": "Owner alignment comment posted — tagged assignee",
+    "reason": "Child of PL-59912. Customer (Westpac Group) security FR. 535+ days in New. Needs independent ownership or closure with customer communication.",
+    "method": "Comment tagging @Prateek Mittal to assign owner or close, cc @Greg Kroon",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-58637",
+    "summary": "Add priorityClassName and allowPrivilegeEscalation to ALL Harness Helm Charts",
+    "reporter": "Canny",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "New",
+    "currentStatus": "New",
+    "action": "Owner alignment comment posted — tagged assignee",
+    "reason": "Child of PL-59912. Canny community FR. 550+ days stale. Broad scope, never decomposed. Needs Helm/SMP owner or closure.",
+    "method": "Comment tagging @Prateek Mittal to reparent or close",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-49183",
+    "summary": "Delegate infrastructure scaling based on queue size",
+    "reporter": "Canny",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "New",
+    "currentStatus": "New",
+    "action": "Owner alignment comment posted — tagged assignee",
+    "reason": "Child of PL-59912. Customer (National Bank of Canada) P2 FR. 760+ days stale. Needs Delegate team owner or closure with customer update.",
+    "method": "Comment tagging @Prateek Mittal to assign owner or close",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-49014",
+    "summary": "Optimize delegate token creation flow",
+    "reporter": "Prateek Mittal",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "New",
+    "currentStatus": "New",
+    "action": "Owner alignment comment posted — tagged assignee",
+    "reason": "Child of PL-59912. Self-filed internal optimization. 765+ days stale. No customer pressure. Close as Won't Do or sprint-commit.",
+    "method": "Comment tagging @Prateek Mittal to close or sprint-commit",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "DEL-6618",
+    "summary": "Last Heartbeat in delegate page (on hover) on full timestamp is not timestamp of client browser",
+    "reporter": "Ken Ng (DEACTIVATED)",
+    "assignee": "Nataraja M",
+    "previousStatus": "New",
+    "currentStatus": "New",
+    "action": "Owner alignment comment posted — tagged assignee",
+    "reason": "Child of PL-59912. Minor UI cosmetic bug. Reporter deactivated. 740+ days stale. Close as Won't Do or quick-fix.",
+    "method": "Comment tagging @Nataraja M to close or fix",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "DEL-6611",
+    "summary": "Larger set of controls around Delegates and their assignments/available functions (Security)",
+    "reporter": "Kinnon Yee",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "New",
+    "currentStatus": "New",
+    "action": "Owner alignment comment posted — tagged assignee",
+    "reason": "Child of PL-59912. Federal customer (US CBP) security/RBAC FR. P2, 575+ days stale. Should be independently tracked under Delegate security epic.",
+    "method": "Comment tagging @Prateek Mittal to assign to IAM/Delegate owner, cc @Kinnon Yee",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "DEL-6610",
+    "summary": "How to get a list of delegates based on tags via terraform provider",
+    "reporter": "Nandeesh G K",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "New",
+    "currentStatus": "New",
+    "action": "Owner alignment comment posted — tagged assignee",
+    "reason": "Child of PL-59912. Customer (Lloyds Banking Group) TF provider FR. P2, 630+ days stale. Should be tracked under TF provider or Delegate epic.",
+    "method": "Comment tagging @Prateek Mittal to assign to TF provider owner, cc @Nandeesh G K",
+    "date": "2026-05-20"
   }
 ]
