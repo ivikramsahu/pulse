@@ -28,24 +28,24 @@
     "summary": "Flexible resource hierarchy",
     "reporter": "Gaurav Nanda",
     "assignee": "Prateek Mittal",
-    "previousStatus": "To Do",
+    "previousStatus": "In Progress",
     "currentStatus": "In Progress",
-    "action": "Pending closure",
-    "reason": "All 4 child tickets Done (design, planning, AC redesign, folder hierarchy). Original scope was a spike/research — complete. Work graduated to PL-59171 (Move Project Initiative). Component deprecated.",
-    "method": "Analysis complete, closure pending confirmation",
-    "date": "2026-05-08"
+    "action": "Closure comment posted — tagged assignee",
+    "reason": "All 4 child tickets Done. Initiative 100% complete. Reporter (Gaurav Nanda) deactivated. Pure bookkeeping — resolve as Done.",
+    "method": "Comment tagging @Prateek Mittal to close",
+    "date": "2026-05-20"
   },
   {
     "key": "PL-50584",
     "summary": "License Utilization - Fix Now",
     "reporter": "Prashant Batra",
-    "assignee": "Sachin Walia",
+    "assignee": "Charles Yang",
     "previousStatus": "To Do",
     "currentStatus": "To Do",
-    "action": "Pending closure (1 week deadline)",
-    "reason": "Reporter and assignee both left org. 22/37 children Done, 11 closed (Won't Fix/Duplicate/Invalid/Not a Bug). 3 remaining To Do items flagged for their module owners. No description, no owner, 740+ days stale.",
-    "method": "Comment with full summary, 1-week deadline for objections",
-    "date": "2026-05-08"
+    "action": "Closure comment posted — tagged assignee",
+    "reason": "All 31 children resolved (19 Done, 1 Deployed, 11 closed). 100% complete. Epic in To Do for 750+ days despite all subtasks finished. Reporter (Prashant Batra) deactivated.",
+    "method": "Comment tagging @Charles Yang to close as Done",
+    "date": "2026-05-20"
   },
   {
     "key": "UI-1630",
@@ -82,5 +82,89 @@
     "reason": "Child of PL-50584. Reporter left org. 725+ days stale. Sibling CCM-17004 (annualized reporting to metabase) already completed. Likely addressed by existing CCM work.",
     "method": "Comment tagging assignee — 1 week deadline",
     "date": "2026-05-08"
+  },
+  {
+    "key": "PL-55785",
+    "summary": "Module specific traceability asks",
+    "reporter": "Akshay Anand Khole",
+    "assignee": "Akshay Anand Khole",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Closure comment posted — tagged assignee",
+    "reason": "Approach abandoned — 7/11 children closed (6 Won't Fix, 1 Cannot Reproduce). Only 1 Done. Remaining 3 in To Do with no progress in 660+ days. Dead epic.",
+    "method": "Comment tagging @Akshay Anand Khole to close as Won't Do",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-57871",
+    "summary": "IAM: GA NG LDAP in all Prod Env[From Q4]",
+    "reporter": "Shashank Singh",
+    "assignee": "Niyasha Jain",
+    "previousStatus": "Waiting for customer",
+    "currentStatus": "Waiting for customer",
+    "action": "Closure comment posted — tagged assignee",
+    "reason": "Stuck in 'Waiting for customer' for 580+ days. Only child is a Duplicate. No real deliverables scoped or executed. Customer input never came.",
+    "method": "Comment tagging @Niyasha Jain to close, cc @Shashank Singh",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-59762",
+    "summary": "Reduce logging cost by 50%",
+    "reporter": "Raghvendra Singh",
+    "assignee": "Raghvendra Singh",
+    "previousStatus": "In Progress",
+    "currentStatus": "In Progress",
+    "action": "Closure comment posted — tagged @Vikram Sahu (reassign needed)",
+    "reason": "16/18 children Done (94% complete). 1 remaining To Do stale 10+ months. Both assignee and reporter (Raghvendra Singh) DEACTIVATED. Resolve as Done.",
+    "method": "Comment tagging @Vikram Sahu — both owner accounts deactivated, needs reassignment to close",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-59912",
+    "summary": "Delegate / Runner - Medium Priority FRs",
+    "reporter": "Abhishek Thamman",
+    "assignee": "Unassigned",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Closure comment posted — tagged reporter",
+    "reason": "60% explicitly rejected (10 Won't Fix). No assignee. Zero execution on remaining 8 items for 480+ days. Dead backlog holder.",
+    "method": "Comment tagging @Abhishek Thamman (reporter, no assignee) to close as Won't Do",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-63269",
+    "summary": "Integrate mixpanel session replay and remove hotjar",
+    "reporter": "Rajiv Pullella",
+    "assignee": "Rajiv Pullella",
+    "previousStatus": "In Progress",
+    "currentStatus": "In Progress",
+    "action": "Closure comment posted — tagged @Vikram Sahu (reassign needed)",
+    "reason": "ALL 7 child tickets Done. 100% complete. Epic never transitioned to Done. Both assignee and reporter (Rajiv Pullella) DEACTIVATED.",
+    "method": "Comment tagging @Vikram Sahu — both owner accounts deactivated, needs reassignment to close",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-59171",
+    "summary": "Move Project Initiative",
+    "reporter": "Arya Haldar",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "In Progress",
+    "currentStatus": "In Progress",
+    "action": "Closure comment posted — tagged assignee",
+    "reason": "6/8 children resolved (5 Done, 1 Duplicate). Remaining 2 To Do items untouched 500+ days. Core Move Project functionality shipped. P1 initiative stalled.",
+    "method": "Comment tagging @Prateek Mittal to close as Done, cc @Arya Haldar",
+    "date": "2026-05-20"
+  },
+  {
+    "key": "PL-63303",
+    "summary": "Audit trail to capture pipeline runs by Module (CI, CD, STO, IACM ..)",
+    "reporter": "Umesh Kumar",
+    "assignee": "Prateek Mittal",
+    "previousStatus": "To Do",
+    "currentStatus": "To Do",
+    "action": "Closure comment posted — tagged assignee",
+    "reason": "Zero child tickets created. No work decomposed. Sitting in To Do for 350+ days with no activity. Never scoped or prioritized into any sprint.",
+    "method": "Comment tagging @Prateek Mittal to close as Won't Do, cc @Umesh Kumar",
+    "date": "2026-05-20"
   }
 ]
